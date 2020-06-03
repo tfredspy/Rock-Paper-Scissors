@@ -29,40 +29,44 @@
         computerSelection = computerPlay();
         if(playerFinal === 'Rock'){
             if(computerSelection === 'Rock'){
-                const status = 'Tie!'
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'tie';
+                return status;
             }else if(computerSelection === 'Paper'){
-                const status = "Lose!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'lose';
+                return status;
             }else{
-                const status = "Win!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'win';
+                return status;
             }
         }else if(playerFinal === 'Paper'){
             if(computerSelection === 'Paper'){
-                const status = "Tie!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'tie';
+                return status;
             }
             else if(computerSelction === 'Rock'){
-                const status = 'Win!';
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'win';
+                return status;
             }else{
-                const status = 'Lose!';
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'lose';
+                return status;
             }
         }else if(playerFinal === 'Scissor'){
             if(computerSelection === 'Scissor'){
-                const status = "Tie!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'tie';
+                return status;
             }
             else if(computerSelection === 'Paper'){
-                const status = "Win!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = "win";
+                return status;
             }else{
-                status = "Lose!";
-                return console.log("You chose " + playerFinal + " Computer chose " + computerSelection + " You " + status);
+                const status = 'lose';
+                return status;
             }
         }
+    }
+
+    function game(){
+
     }
 </script>
 
