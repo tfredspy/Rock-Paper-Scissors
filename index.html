@@ -29,44 +29,52 @@
         computerSelection = computerPlay();
         if(playerFinal === 'Rock'){
             if(computerSelection === 'Rock'){
-                const status = 'tie';
+                const status = 'Tie, You Both Chose Rock!';
                 return status;
             }else if(computerSelection === 'Paper'){
-                const status = 'lose';
+                const status = 'Lose, Paper Beats Rock!';
                 return status;
             }else{
-                const status = 'win';
+                const status = 'Win, Rock Beats Scissors';
                 return status;
             }
         }else if(playerFinal === 'Paper'){
             if(computerSelection === 'Paper'){
-                const status = 'tie';
+                const status = 'Tie, You Both Chose Rock!';
                 return status;
             }
             else if(computerSelction === 'Rock'){
-                const status = 'win';
+                const status = 'Win, Paper Beats Rock';
                 return status;
             }else{
-                const status = 'lose';
+                const status = 'Lose, Scissors Beats Paper';
                 return status;
             }
         }else if(playerFinal === 'Scissor'){
             if(computerSelection === 'Scissor'){
-                const status = 'tie';
+                const status = 'Tie, You Both Chose Scissor';
                 return status;
             }
             else if(computerSelection === 'Paper'){
-                const status = "win";
+                const status = 'Win, Scissor Beats Paper';
                 return status;
             }else{
-                const status = 'lose';
+                const status = 'Lose, Rock Beats Scissor';
                 return status;
             }
         }
     }
 
     function game(){
-
+        const input = window.prompt("Rock, Paper, or Scissor?", '')
+        const first = input.slice(0,1);
+        const firstCap = first.toUpperCase();
+        const rest = input.slice(1, input.length);
+        const restCap = rest.toLowerCase();
+        const player = firstCap + restCap
+        for(i=0; i<5; i++){
+            console.log('Game:' + (i+1) + ' You Chose ' + player + ' You ' + playOne(player));
+        }
     }
 </script>
 
