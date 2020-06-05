@@ -20,7 +20,9 @@
         }
     }
 
-    function playOne(playerSelection=''){
+    console.log("If you want to play one game, write playRound('rock'), playRound('paper'), or playRound('scissor') in the console!")
+
+    function playRound(playerSelection='', computerSelection){
         const firstChar = playerSelection.slice(0,1);
         const firstCharCapitalize = firstChar.toUpperCase();
         const rest = playerSelection.slice(1, playerSelection.length);
@@ -40,10 +42,10 @@
             }
         }else if(playerFinal === 'Paper'){
             if(computerSelection === 'Paper'){
-                const status = 'Tie, You Both Chose Rock!';
+                const status = 'Tie, You Both Chose Paper!';
                 return status;
             }
-            else if(computerSelction === 'Rock'){
+            else if(computerSelection === 'Rock'){
                 const status = 'Win, Paper Beats Rock';
                 return status;
             }else{
@@ -73,9 +75,11 @@
         const restCap = rest.toLowerCase();
         const player = firstCap + restCap
         for(i=0; i<5; i++){
-            console.log('Game:' + (i+1) + ' You Chose ' + player + ' You ' + playOne(player));
+            console.log('Game:' + (i+1) + ' You Chose ' + player + ' You ' + playRound(player));
         }
     }
+
+    game();
 </script>
 
 
